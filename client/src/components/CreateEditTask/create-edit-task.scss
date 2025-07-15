@@ -1,0 +1,92 @@
+@use '@carbon/react/scss/theme' as *;
+
+$block-class: 'create-edit-task';
+
+.#{$block-class} {
+  overflow: hidden;
+}
+
+.#{$block-class} {
+  background-color: $background;
+  color: $text-primary;
+  border-color: $border-tile-01;
+  border-radius: var(--bs-border-radius);
+  padding: 0;
+}
+
+.#{$block-class}::backdrop {
+  background-color: $background;
+  opacity: 0.5;
+}
+
+.#{$block-class}__dialog-contents {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  max-width: 100%;
+  width: 24rem;
+  max-height: 32rem;
+  overflow: hidden;
+  padding: 1rem 0;
+  box-sizing: border-box;
+}
+
+.#{$block-class}__form {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+}
+
+.#{$block-class}__form-title {
+  padding-inline: 1rem;
+}
+
+.#{$block-class}__form-inputs {
+  padding-inline: 1rem;
+  border: 0;
+  overflow-y: auto;
+}
+
+.#{$block-class}__form-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.#{$block-class}__input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.#{$block-class}__image-selector {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.#{$block-class}__image-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.#{$block-class}__image-controls .#{$block-class}__image-remove {
+  margin-bottom: 2rem;
+}
+
+.#{$block-class}__image {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.#{$block-class}__footer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: -1rem -1rem 1rem $background;
+
+  button {
+    padding: 0.5rem;
+  }
+}

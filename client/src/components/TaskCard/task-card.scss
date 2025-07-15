@@ -1,0 +1,73 @@
+@use '@carbon/react/scss/theme' as *;
+
+$block-class: 'task-card';
+
+.#{$block-class} {
+  // styles for $block-class
+  display: grid;
+  grid-template-rows: 1fr auto;
+  width: 18rem;
+  height: 12rem;
+  padding: 0;
+  overflow: hidden;
+
+  &:has(.#{$block-class}__link:focus) {
+    border-width: 2px;
+    outline: 2px solid $border-interactive;
+    outline-offset: 0;
+  }
+}
+
+.#{$block-class}__top {
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.#{$block-class}__link {
+  color: $link-primary;
+
+  text-decoration: none;
+}
+
+.#{$block-class}__link:hover {
+  cursor: pointer;
+  background-color: $layer-02;
+}
+
+.#{$block-class}__link:focus {
+  outline: none;
+}
+
+.#{$block-class}__title {
+  white-space: nowrap;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.#{$block-class}__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: 0.5rem;
+  color: $text-primary;
+}
+
+.#{$block-class}__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 1rem;
+}
+
+.#{$block-class}__portfolio {
+  position: absolute;
+  top: 0;
+  right: 0.125rem;
+  color: $support-success;
+}

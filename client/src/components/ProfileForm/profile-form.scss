@@ -1,0 +1,11 @@
+$block-class: 'profile-form';
+
+.#{$block-class}__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.#{$block-class}__input {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}

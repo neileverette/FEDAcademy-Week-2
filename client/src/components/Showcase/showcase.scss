@@ -1,0 +1,30 @@
+@use '@carbon/react/scss/theme' as *;
+$block-class: 'showcase';
+
+.#{$block-class} {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+.#{$block-class}__section-content {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  border-top: 1px solid $border-subtle-01;
+}
+
+.#{$block-class}__section-content:nth-child(even) {
+  background-color: $layer-01;
+}
+
+.#{$block-class}__title {
+  color: $support-success;
+}
+
+.#{$block-class}__image {
+  width: 100%;
+}

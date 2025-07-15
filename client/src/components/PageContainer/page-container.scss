@@ -1,0 +1,39 @@
+@use '@carbon/react/scss/theme' as *;
+
+$block-class: 'page-container';
+
+.#{$block-class} {
+  // styles for $block-class
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $background;
+  color: $text-primary;
+
+  @media screen and (max-width: 82rem) {
+    padding: 0 1rem;
+  }
+}
+
+.#{$block-class}__inner {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  width: calc(200% - 100vw); // width minus 2 x scroll bar
+  justify-items: center;
+  margin: 0 calc(100vw - 100%); // take scroll bar width off each side
+  padding-bottom: 1rem;
+}
+
+.#{$block-class}__inner > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 80rem;
+}
+
+.#{$block-class}__page-header {
+  margin: 2rem 0 1rem;
+}

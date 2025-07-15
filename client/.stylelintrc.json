@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-plugin-carbon-tokens/config/recommended"
+  ],
+  "plugins": [
+    "stylelint-plugin-carbon-tokens"
+  ],
+  "reportNeedlessDisables": true,
+  "reportInvalidScopeDisables": true,
+  "reportDescriptionlessDisables": true,
+  "selector-class-pattern": [
+    "^[a-z]([-]?[a-z0-9]+)*(__[a-z0-9]([-]?[a-z0-9]+)*)?(--[a-z0-9]([-]?[a-z0-9]+)*)?$",
+    {
+      "message": "should match Harry Roberts' style BEM block[__element][--modifier]"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+$block-class: 'theme-form';
+
+.#{$block-class} {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}

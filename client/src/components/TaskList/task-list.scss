@@ -1,0 +1,32 @@
+$block-class: 'task-list';
+
+.#{$block-class} {
+  // styles for $block-class
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.#{$block-class}__controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.#{$block-class}__state-input:disabled {
+  cursor: not-allowed;
+}
+
+.#{$block-class}__state-input:disabled + .#{$block-class}__state-label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.#{$block-class}__search {
+  width: initial;
+}
