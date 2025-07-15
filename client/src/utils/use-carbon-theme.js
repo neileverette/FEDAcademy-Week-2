@@ -17,18 +17,19 @@ export const useCarbonTheme = (options) => {
   const { themeSetting: initialThemeSetting } = getLocalStorageValues();
   const initialPrefersDark =
     window.matchMedia('(prefers-color-scheme: dark)')?.matches ?? false;
+  
   const initialTheme = getTheme(
-    initialThemeSetting,
+    initialThemeSetting || 'dark',  // ← ADD: || 'dark' here
     initialPrefersDark,
     inverse,
-  );
+);
 
   const [theme, setTheme] = useState(initialTheme);
   const prefersDarkScheme = usePrefersDarkScheme();
   const appConfig = useAppConfigContext();
 
   useEffect(() => {
-    setTheme(getTheme(appConfig.state.theme, prefersDarkScheme, inverse));
+    setTheme(getTheme(appConfig.state.theme || 'dark', prefersDarkScheme, inverse));
   }, [appConfig.state.theme, inverse, prefersDarkScheme]);
 
   return theme;
